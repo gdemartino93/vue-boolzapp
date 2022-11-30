@@ -66,6 +66,8 @@ main{
 }
 .chat{
     background-image: url(../img/bg.jpg);
+    overflow: auto;
+    flex: 1;
 }
 .new-msg{
     background-color: #8edafc;
@@ -117,4 +119,9 @@ main{
     padding: 6px;
     font-size: 1rem;
     border: 1px solid white;
+}
+.page-chat{
+    margin: 80px 15px 60px 15px;
+    margin-top: 80px;
+    margin-bottom: 60px;
 }
