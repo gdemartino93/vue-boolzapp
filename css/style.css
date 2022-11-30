@@ -23,6 +23,7 @@ main{
     align-items: center;
     position: relative;
     top: -10vh;
+    box-shadow: 5px 5px 37px 1px #000000;
 }
 
 .header-app{
