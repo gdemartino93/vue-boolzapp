@@ -23,11 +23,10 @@ main{
     align-items: center;
     position: relative;
     top: -10vh;
-    border: 1px solid black;
 }
 
 .header-app{
-    min-height: 50px;
+    min-height: 70px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -49,7 +48,7 @@ main{
     background-color: white;
 }
 .contact{
-   margin-top: 50px;
+   margin-top: 70px;
    overflow: hidden;
    display: flex;
    flex-direction: column;
@@ -102,4 +101,20 @@ main{
 }
 .contact-user-text{
     margin: 10px 20px 10px 0px;
+}
+
+.send-msg-bar{
+    background-color: #F2EEEA;
+    min-height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.send-msg-bar input {
+    width: 80%;
+    padding: 6px;
+    font-size: 1rem;
+    border: 1px solid white;
 }
