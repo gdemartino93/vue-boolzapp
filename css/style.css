@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.8rem + 0.25vw, 1.10rem);
 }
 i{
     cursor: pointer;
@@ -32,6 +34,10 @@ main{
     left: 0;
     background-color:#E9E9E9;
     display: flex;
+}
+.header-app img{
+    width: 40px;
+    border-radius: 50%;
 }
 .header-app i{
     color: grey;
@@ -71,17 +77,26 @@ main{
     filter: invert(88%) sepia(56%) saturate(13%) hue-rotate(263deg) brightness(108%) contrast(102%);
 }
 
-.contact-user{
-    height: 50px;
-    width: 100%;
-    background-color: gold;
-    border: 1px solid black;
-}
-
-.userprova1{
-
+.section-contact{
     overflow: auto;
     flex-shrink: 0;
     flex-basis: 9px;
     flex-grow: 1;
+}
+
+.contact-user{
+    display: flex;
+    width: 100%;
+    background-color: gold;
+    border: 1px solid black;
+}
+.contact-user-icon{
+    margin: 10px 20px 10px 30px
+}
+.contact-user-icon > img {
+    width: 50px;
+    border-radius: 50%;
+}
+.contact-user-text{
+    margin: 10px 20px 10px 0px;
 }
