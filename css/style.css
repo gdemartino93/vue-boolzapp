@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: green;
+    height: 15vh;
+}
+main{
+    background-color: rosybrown;
+    height: 85vh;
+}
+.app{
+    width: 1200px;
+    height: 85vh;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.container{
+    position: relative;
+    top: -10vh;
+}
+.header-app{
+    min-height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+}
+.main-app{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: royalblue;
+}
+.contact{
+  
+    background-color: yellowgreen;
+}
+.chat{
+
+    background-color: pink;
+}
