@@ -121,7 +121,20 @@ main{
     border: 1px solid white;
 }
 .page-chat{
-    margin: 80px 15px 60px 15px;
-    margin-top: 80px;
-    margin-bottom: 60px;
+    margin: 90px 15px 60px 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    overflow-x: hidden;
+}
+.msg-sent{
+    background-color:#DBF8BF ;
+    padding: 20px 20px;
+    border-radius: 10px 10px;
+}
+.msg-received{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px 10px;
 }
