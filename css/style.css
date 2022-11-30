@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 1rem;
-    /* font-size: clamp(1rem, 0.8rem + 0.25vw, 1.10rem); */
+    font-size: clamp(0.625rem, 0.5114rem + 0.4545vw, 0.9375rem);
 }
 i{
     cursor: pointer;
