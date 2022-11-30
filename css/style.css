@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 1rem;
-    font-size: clamp(1rem, 0.8rem + 0.25vw, 1.10rem);
+    /* font-size: clamp(1rem, 0.8rem + 0.25vw, 1.10rem); */
 }
 i{
     cursor: pointer;
@@ -62,6 +62,9 @@ main{
     display: flex;
     justify-content: center;
 }
+.notification-text{
+    line-height: 18px;
+}
 .chat{
     background-image: url(../img/bg.jpg);
 }
@@ -72,8 +75,8 @@ main{
     align-items: center;
 }
 .new-msg > img{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     filter: invert(88%) sepia(56%) saturate(13%) hue-rotate(263deg) brightness(108%) contrast(102%);
 }
 
