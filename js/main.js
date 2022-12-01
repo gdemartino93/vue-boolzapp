@@ -6,6 +6,7 @@ const { createApp } = Vue
                 active : 0,
                 newMsg : "",
                 msgCp : "ok",
+                searchName : "",
                 contacts: [
                     {
                         name: 'Michele',
@@ -198,8 +199,18 @@ const { createApp } = Vue
                         }
                     )
                 }, 1000)
-
+            },
+            searchContact(){
+            for(let i = 0; i < this.contacts.length; i++){
+                if (this.contacts[i].name.toUpperCase().includes(this.searchName.toUpperCase())) {
+                    this.contacts[i].visible = true;
+                }
+                else {
+                    this.contacts[i].visible = false;
+                }
             }
+           
+        },
                
         }
 

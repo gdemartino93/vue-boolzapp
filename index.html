@@ -65,12 +65,12 @@
                         </div>
                         <div class="search">
                             <div class="input-group p-1">
-                                <span class="input-group-text search-icon" ><i class="fa-solid fa-magnifying-glass"></i></span>
-                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" >
+                                <span class="input-group-text search-icon" ><i class="fa-solid fa-magnifying-glass" ></i></span>
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" @KeyUp="searchContact()" v-model="searchName" >
                               </div>                           
                         </div>
                         <section class="section-contact">
-                            <div v-for="(contact,i) in contacts" class='contact-user' @click="selected(i)">
+                            <div v-for="(contact,i) in contacts" class='contact-user' @click="selected(i)" :class="contact.visible ? '' : 'd-none'">
                                 <div class="contact-user-icon">
                                     <img :src="contact.avatar" alt="">
                                 </div>
