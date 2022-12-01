@@ -7,6 +7,7 @@ const { createApp } = Vue
                 newMsg : "",
                 msgCp : "ok",
                 searchName : "",
+                menu : false,
                 contacts: [
                     {
                         name: 'Michele',
@@ -209,8 +210,11 @@ const { createApp } = Vue
                     this.contacts[i].visible = false;
                 }
             }
-           
         },
+        menu(){
+            menu = true
+            
+        }
                
         }
 

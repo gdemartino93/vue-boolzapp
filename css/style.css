@@ -134,11 +134,19 @@ main{
 }
 .msg-sent{
     background-color:#DBF8BF ;
-    padding: 20px 20px;
+    padding: 20px 20px 0 20px;
     border-radius: 10px 10px;
 }
 .msg-received{
     background-color: white;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     border-radius: 10px 10px;
+}
+.block{
+    display: block;
+}
+.dataTxt{
+    font-size: 10px;
+    color: grey;
+    align-self: flex-end;
 }

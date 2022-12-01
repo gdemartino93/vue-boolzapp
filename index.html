@@ -77,7 +77,7 @@
                                 
                                 <div class="contact-user-text">
                                     <div class="contact-user-text-name fs-5 ">{{contact.name}}</div>
-                                    <div class="contact-user-text-preview text-secondary fs-6 fw-lighter"> Ultimo msg inviato</div>
+                                    <div class="contact-user-text-preview text-secondary fs-6 fw-lighter"> {{contact.messages[contact.messages.length-1].message}}</div>
                                 </div>
                             </div>
        
@@ -88,9 +88,11 @@
 
                         <div class="page-chat">
 
-                            <div v-for="message in contacts[active].messages" :class="message.status === 'sent' ? 'msg-sent col-4 offset-8'  : 'msg-received col-4'">
-                                <div>
-                                    <span> {{message.message}} </span>
+                            <div v-for="message in contacts[active].messages" :class="message.status === 'sent' ? 'msg-sent col-4 offset-8' : 'msg-received col-4'">
+                                
+                                <div class="d-flex justify-content-between flex-column  " >
+                                    <span class="pb-2"> {{message.message}} </span>
+                                    <span class="dataTxt">{{message.date}}</span>
                                 </div>
                             </div>
                         </div>
@@ -111,3 +113,6 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
