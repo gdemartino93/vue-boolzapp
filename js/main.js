@@ -170,7 +170,6 @@ const { createApp } = Vue
                     }
                 ]
                 
-
             }
         },
         methods:{
@@ -194,16 +193,14 @@ const { createApp } = Vue
                 setTimeout(() =>{
                     this.contacts[this.active].messages.push(
                         {
-                            message : 'ok DIO CANE',
+                            message : 'ok',
                             status : 'received'
                         }
                     )
                 }, 1000)
 
             }
-            
-            
-            
+               
         }
 
     }).mount("#webapp")
