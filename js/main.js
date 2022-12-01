@@ -6,17 +6,6 @@ const { createApp } = Vue
                 active : 0,
                 newMsg : "",
                 msgCp : "ok",
-                msgFromCp: [
-                    msg = 'prova',
-                    msg = 'prova1',
-                    msg = 'prova3',
-                    msg = 'prova4',
-                    msg = 'qwqe',
-                    msg = '1234124',
-                    msg = 'csdds',
-                    msg = 'aaaaaaaaaaaaaaaaaaaaaaaaa',
-                    
-                ],
                 searchName : "",
                 menu : false,
                 contacts: [
@@ -204,11 +193,13 @@ const { createApp } = Vue
                 }
                 this.newMsg="";
                 setTimeout(() =>{
-                    var x = Math.floor(Math.random() * 10);
+                    var x = Math.floor(Math.random() * 7);
+                    const msgFromCp = ["Ciao","come stai?","Che mi racconti?","Puoi parlare?","Hai rotto i coglioni", "Non voglio parlare", "ahahahahahah", "cazzo vuoi?"];
+
                     this.contacts[this.active].messages.push(
                         
                         {
-                            message : 'ok',
+                            message : msgFromCp[x],
                             status : 'received'
                         }
                     )
