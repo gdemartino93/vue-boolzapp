@@ -5,6 +5,7 @@ const { createApp } = Vue
             return{
                 active : 0,
                 newMsg : "",
+                msgCp : "ok",
                 contacts: [
                     {
                         name: 'Michele',
@@ -189,7 +190,16 @@ const { createApp } = Vue
                 } else {
                     return this.newMsg = '';
                 }
-                this.newMsg=""
+                this.newMsg="";
+                setTimeout(() =>{
+                    this.contacts[this.active].messages.push(
+                        {
+                            message : 'ok DIO CANE',
+                            status : 'received'
+                        }
+                    )
+                }, 1000)
+
             }
             
             
