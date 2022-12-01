@@ -95,27 +95,11 @@
                                     <span> {{message.message}} </span>
                                 </div>
                             </div>
-
-                            
-
-
-<!-- 
-                            <div class="row">
-                                <div class="col-12 offset-8">
-                                    <span class="msg-sent">inviato</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <span class="msg-received">ricevuto</span>
-                                </div>
-                            </div>
-     -->
                         </div>
 
                         <div class="send-msg-bar col-8">
                             <i class="fa-regular fa-face-smile fs-4 ms-3"></i>
-                            <input type="text" placeholder="Scrivi un messaggio...">
+                            <input type="text" placeholder="Scrivi un messaggio..." v-model="newMsg" @KeyUp.enter="sendNew" >
                             <i class="fa-solid fa-microphone fs-4 me-3"></i>
 
                         </div>

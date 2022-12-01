@@ -4,6 +4,7 @@ const { createApp } = Vue
         data() {
             return{
                 active : 0,
+                newMsg : "",
                 contacts: [
                     {
                         name: 'Michele',
@@ -175,6 +176,23 @@ const { createApp } = Vue
             selected(index){
                 this.active = index;
             },
+            sendNew(){
+            
+                if (this.newMsg !== '') {
+                    this.contacts[this.active].messages.push(
+                        {
+                        message: this.newMsg,
+                        status: 'sent',
+                        },
+                        
+                    )
+                } else {
+                    return this.newMsg = '';
+                }
+                this.newMsg=""
+            }
+            
+            
             
         }
 
