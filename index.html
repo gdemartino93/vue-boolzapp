@@ -90,8 +90,8 @@
 
                         <div class="page-chat">
 
-                            <div v-for="message in contacts[active].messages" class="row" :class="message.status === 'sent' ? 'msg-sent'  : 'msg-received'">
-                                <div class="col-12">
+                            <div v-for="message in contacts[active].messages" :class="message.status === 'sent' ? 'msg-sent col-4 offset-8'  : 'msg-received col-4'">
+                                <div>
                                     <span> {{message.message}} </span>
                                 </div>
                             </div>
