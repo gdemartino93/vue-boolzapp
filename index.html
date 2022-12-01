@@ -91,7 +91,7 @@
                             <div v-for="message in contacts[active].messages" :class="message.status === 'sent' ? 'msg-sent col-4 offset-8' : 'msg-received col-4'">
                                 
                                 <div class="d-flex justify-content-between flex-column  " >
-                                    <span class="pb-2"> {{message.message}} </span>
+                                    <span class="pb-2"> {{message.message}}  </span>
                                     <span class="dataTxt">{{message.date}}</span>
                                 </div>
                             </div>
@@ -101,7 +101,6 @@
                             <i class="fa-regular fa-face-smile fs-4 ms-3"></i>
                             <input type="text" placeholder="Scrivi un messaggio..." v-model="newMsg" @KeyUp.enter="sendNew" >
                             <i class="fa-solid fa-microphone fs-4 me-3"></i>
-
                         </div>
                     </div>
                 </div>

@@ -175,16 +175,20 @@ const { createApp } = Vue
             }
         },
         methods:{
+         
             selected(index){
                 this.active = index;
             },
             sendNew(){
-            
+                var now = new Date();
+                var current = now.getHours() + ':' + now.getMinutes();
+
                 if (this.newMsg !== '') {
                     this.contacts[this.active].messages.push(
                         {
                         message: this.newMsg,
                         status: 'sent',
+                        date : current
                         },
                         
                     )
@@ -194,13 +198,14 @@ const { createApp } = Vue
                 this.newMsg="";
                 setTimeout(() =>{
                     var x = Math.floor(Math.random() * 7);
-                    const msgFromCp = ["Ciao","come stai?","Che mi racconti?","Puoi parlare?","Hai rotto i coglioni", "Non voglio parlare", "ahahahahahah", "cazzo vuoi?"];
+                    const msgFromCp = ["Ciao","come stai?","Che mi racconti?","Puoi parlare?","Non mi scrivere più", "Non voglio parlare", "ahahahahahah", "cosa vuoi?"];
 
                     this.contacts[this.active].messages.push(
                         
                         {
                             message : msgFromCp[x],
-                            status : 'received'
+                            status : 'received',
+                            date : current
                         }
                     )
                 }, 1000)
@@ -215,6 +220,7 @@ const { createApp } = Vue
                 }
             }
         },
+       
                
         }
 
