@@ -3,6 +3,7 @@ const { createApp } = Vue
     createApp({
         data() {
             return{
+                active : 0,
                 contacts: [
                     {
                         name: 'Michele',
@@ -171,9 +172,9 @@ const { createApp } = Vue
             }
         },
         methods:{
-            prova(){
-
-            }
+            selected(index){
+                this.active = index;
+            },
             
         }
 

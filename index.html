@@ -35,15 +35,19 @@
                     </div>
                     <!-- header page chat -->
                     <div class="col-8 d-flex align-items-center border-start border-secondary border-2  ">
-                        <div class="col-9 ">
+
+                        <div class="col-9 asd" v-for="(activeUser,i) in contacts" :class="i == active ? '' : 'd-none'">
                             <div class="ms-3 d-flex">
-                                    <img src="img/avatar_2.jpg" alt="">
+                                    <img :src="activeUser.avatar" alt="">
                                 <div class="d-flex flex-column mx-3">
-                                    <span class="fs-5">Michele</span>
+                                    <span class="fs-5">{{activeUser.name}}</span>
                                     <span class="fs-6 text-secondary">Ultimo accesso oggi alle 12:00</span>
                                 </div>
                             </div>
                         </div>
+
+
+
                         <div class="col-3 d-flex justify-content-end">
                             <i class="fa-solid fa-magnifying-glass fs-5"></i>
                             <i class="fa-solid fa-paperclip mx-3 fs-5"></i>
@@ -68,7 +72,7 @@
                               </div>                           
                         </div>
                         <section class="section-contact">
-                            <div v-for="contact in contacts" class='contact-user'>
+                            <div v-for="(contact,i) in contacts" class='contact-user' @click="selected(i)">
                                 <div class="contact-user-icon">
                                     <img :src="contact.avatar" alt="">
                                 </div>
@@ -86,9 +90,9 @@
 
                         <div class="page-chat">
 
-                            <div v-for="(message,i) in contacts" class="row">
-                                <div class="col-12 offset-8">
-                                    <span class="msg-sent"> {{message.messages}}asd</span>
+                            <div v-for="message in contacts[active].messages" class="row" :class="message.status === 'sent' ? 'msg-sent'  : 'msg-received'">
+                                <div class="col-12">
+                                    <span> {{message.message}} </span>
                                 </div>
                             </div>
 
