@@ -188,15 +188,13 @@ const { createApp } = Vue
                 var now = new Date();
                 var current = now.getHours() + ':' + now.getMinutes();
                 
-
-                if (this.newMsg !== '') {
+                if ((this.newMsg !== '') && (this.newMsg.trim().length !== 0)) {
                     this.contacts[this.active].messages.push(
                         {
                         message: this.newMsg,
                         status: 'sent',
                         date : current
-                        },
-                        
+                        },                  
                     )
                 } else {
                     return this.newMsg = '';
@@ -225,8 +223,7 @@ const { createApp } = Vue
                     this.contacts[i].visible = false;
                 }
             }
-        },
-       
+        },  
                
         }
 

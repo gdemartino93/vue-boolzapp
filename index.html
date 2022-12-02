@@ -65,7 +65,9 @@
                         </div>
                         <div class="search">
                             <div class="input-group p-1">
-                                <span class="input-group-text search-icon" ><i class="fa-solid fa-magnifying-glass" ></i></span>
+                                <span class="input-group-text search-icon" >
+                                    <i class="fa-solid fa-magnifying-glass" ></i>
+                                </span>
                                 <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" @KeyUp="searchContact()" v-model="searchName" >
                               </div>                           
                         </div>
@@ -88,10 +90,11 @@
 
                         <div class="page-chat">
 
-                            <div v-for="message in contacts[active].messages" :class="message.status === 'sent' ? 'msg-sent col-4 offset-8' : 'msg-received col-4'">
+                            <div v-for="(message,i) in contacts[active].messages" :class="message.status === 'sent' ? 'msg-sent col-4 offset-8' : 'msg-received col-4'">
                                 
                                 <div class="d-flex justify-content-between flex-column  " >
-                                    <span class="pb-2 d-flex justify-content-between align-items-center" @mouseover="menuon" @mouseout="menuoff">   {{message.message}} <i class="fa-solid fa-angle-down" :class="menu == false ? 'd-none' : 'd-block'" ></i>  
+                                    <span class="pb-2 d-flex justify-content-between align-items-center" @mouseover="menuon" @mouseout="menuoff">   {{message.message}} 
+                                    <i class="fa-solid fa-angle-down" v-show="menu" ></i>  
                                     </span>
                                     <span class="dataTxt">{{message.date}}</span>
                                     
