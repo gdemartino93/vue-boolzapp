@@ -211,6 +211,11 @@ const { createApp } = Vue
                     )
                 }, 1000)
             },
+            deleteMsg(indice){
+                {
+                    this.contacts[this.active].messages.splice(indice,1)
+                  } 
+            },
             searchContact(){
                 for(let i = 0; i < this.contacts.length; i++){
                     if (this.contacts[i].name.toUpperCase().includes(this.searchName.toUpperCase())) {
@@ -226,3 +231,6 @@ const { createApp } = Vue
     }).mount("#webapp")
 
     
+
+
+             // this.contacts.splice(indice,1) rimuovere contatto lato sinitra?
