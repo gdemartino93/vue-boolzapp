@@ -174,10 +174,10 @@ const { createApp } = Vue
             }
         },
         methods:{
-            dropdown() {
+            dropdown(msg,index) {
                 menu = true,
-                document.getElementById("myDropdown").classList.toggle("show");
-                console.log(menu);
+                
+                console.log(contacts[active]);
             },
             selected(index){
                 this.active = index;
