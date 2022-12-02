@@ -5,6 +5,7 @@ const { createApp } = Vue
             return{
                 active : 0,
                 newMsg : "",
+                menu : false,
                 searchName : "",
                 contacts: [
                     {
@@ -173,8 +174,9 @@ const { createApp } = Vue
             }
         },
         methods:{
-            dropdown() {
-                document.getElementById("myDropdown").classList.toggle("show");
+            dropdown(index) {
+                this.menu = index;
+             
             },
             selected(index){
                 this.active = index;
