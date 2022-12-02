@@ -153,3 +153,9 @@ main{
 .contact-actived{
     background-color: grey;
 }
+.angleOff{
+    display: none;
+}
+.menuOnOff:hover .angleOff{
+    display: block;
+}

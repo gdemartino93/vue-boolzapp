@@ -1,6 +1,7 @@
 const { createApp } = Vue 
 
     createApp({
+        
         data() {
             return{
                 active : 0,
@@ -175,12 +176,12 @@ const { createApp } = Vue
             }
         },
         methods:{
-            menuon(){
-            this.menu= true
-            },
-            menuoff(){
-                this.menu= false
-                },
+            // menuon(){
+            // this.menu= true
+            // },
+            // menuoff(){
+            //     this.menu= false
+            //     },
             selected(index){
                 this.active = index;
             },
