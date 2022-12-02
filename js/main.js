@@ -1,5 +1,4 @@
 const { createApp } = Vue 
-
     createApp({
         
         data() {
@@ -8,7 +7,6 @@ const { createApp } = Vue
                 newMsg : "",
                 searchName : "",
                 menu : false,
-                prova : "Stwwea ",
                 contacts: [
                     {
                         name: 'Michele',
@@ -176,12 +174,11 @@ const { createApp } = Vue
             }
         },
         methods:{
-            // menuon(){
-            // this.menu= true
-            // },
-            // menuoff(){
-            //     this.menu= false
-            //     },
+            dropdown() {
+                menu = true,
+                document.getElementById("myDropdown").classList.toggle("show");
+                console.log(menu);
+            },
             selected(index){
                 this.active = index;
             },
@@ -216,16 +213,15 @@ const { createApp } = Vue
                 }, 1000)
             },
             searchContact(){
-            for(let i = 0; i < this.contacts.length; i++){
-                if (this.contacts[i].name.toUpperCase().includes(this.searchName.toUpperCase())) {
-                    this.contacts[i].visible = true;
+                for(let i = 0; i < this.contacts.length; i++){
+                    if (this.contacts[i].name.toUpperCase().includes(this.searchName.toUpperCase())) {
+                        this.contacts[i].visible = true;
+                    }
+                    else {
+                        this.contacts[i].visible = false;
+                    }
                 }
-                else {
-                    this.contacts[i].visible = false;
-                }
-            }
-        },  
-               
+            },       
         }
 
     }).mount("#webapp")

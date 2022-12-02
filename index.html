@@ -94,7 +94,23 @@
                                 
                                 <div class="d-flex justify-content-between flex-column  " >
                                     <span class="pb-2 d-flex justify-content-between align-items-center menuOnOff">   {{message.message}} 
-                                    <i class="fa-solid fa-angle-down angleOff" ></i>  
+
+
+
+
+
+                                    <div class="dropdown">
+                                        <i class="fa-solid fa-angle-down angleOff" @Click="dropdown" v-if="menu == a?????????????????"></i>  
+                                        <div id="myDropdown" class="dropdown-content">
+                                          <a href="#">Link 1</a>
+                                          <a href="#">Link 2</a>
+                                          <a href="#">Link 3</a>
+                                        </div>
+                                      </div>
+
+
+
+
                                     </span>
                                     <span class="dataTxt">{{message.date}}</span>
                                     
