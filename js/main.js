@@ -5,9 +5,9 @@ const { createApp } = Vue
             return{
                 active : 0,
                 newMsg : "",
-                msgCp : "ok",
                 searchName : "",
                 menu : false,
+                prova : "Stwwea ",
                 contacts: [
                     {
                         name: 'Michele',
@@ -175,13 +175,19 @@ const { createApp } = Vue
             }
         },
         methods:{
-         
+            menuon(){
+            this.menu= true
+            },
+            menuoff(){
+                this.menu= false
+                },
             selected(index){
                 this.active = index;
             },
             sendNew(){
                 var now = new Date();
                 var current = now.getHours() + ':' + now.getMinutes();
+                
 
                 if (this.newMsg !== '') {
                     this.contacts[this.active].messages.push(
@@ -196,7 +202,7 @@ const { createApp } = Vue
                     return this.newMsg = '';
                 }
                 this.newMsg="";
-                setTimeout(() =>{
+                setTimeout(() =>{                
                     var x = Math.floor(Math.random() * 7);
                     const msgFromCp = ["Ciao","come stai?","Che mi racconti?","Puoi parlare?","Non mi scrivere più", "Non voglio parlare", "ahahahahahah", "cosa vuoi?"];
 

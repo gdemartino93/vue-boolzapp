@@ -150,3 +150,6 @@ main{
     color: grey;
     align-self: flex-end;
 }
+.contact-actived{
+    background-color: grey;
+}

@@ -16,7 +16,7 @@
 
     <header></header>
     <main>
-        <div class="container d-flex justify-content-center align-item-center">
+        <div class="container d-flex justify-content-center align-items-center">
             <div class="app col-12" id="webapp">
                 <div class="header-app">
                     <!-- header page contact -->
@@ -91,8 +91,10 @@
                             <div v-for="message in contacts[active].messages" :class="message.status === 'sent' ? 'msg-sent col-4 offset-8' : 'msg-received col-4'">
                                 
                                 <div class="d-flex justify-content-between flex-column  " >
-                                    <span class="pb-2"> {{message.message}}  </span>
+                                    <span class="pb-2 d-flex justify-content-between align-items-center" @mouseover="menuon" @mouseout="menuoff">   {{message.message}} <i class="fa-solid fa-angle-down" :class="menu == false ? 'd-none' : 'd-block'" ></i>  
+                                    </span>
                                     <span class="dataTxt">{{message.date}}</span>
+                                    
                                 </div>
                             </div>
                         </div>
