@@ -107,8 +107,8 @@
                             <input type="text" placeholder="Scrivi un messaggio..." v-model="newMsg" @KeyUp.enter="sendNew" >
 
                             <i class="fa-solid fa-microphone fs-4 me-3" :class="newMsg === '' ? 'd-block' : 'd-none' "></i>
-                            <i class="fa-regular fa-paper-plane fs-4 me-3" :class="newMsg === '' ? 'd-none' : 'd-block'"></i>
-                            
+                            <i class="fa-regular fa-paper-plane fs-4 me-3" :class="newMsg === '' ? 'd-none' : 'd-block'" @click="sendNew"></i>
+
                         </div>
                     </div>
                 </div>
