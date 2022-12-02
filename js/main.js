@@ -176,7 +176,10 @@ const { createApp } = Vue
         methods:{
             dropdown(index) {
                 this.menu = index;
-             
+            },
+            dropdownoff(){
+                this.menu = false
+                
             },
             selected(index){
                 this.active = index;
