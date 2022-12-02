@@ -105,7 +105,10 @@
                         <div class="send-msg-bar col-8">
                             <i class="fa-regular fa-face-smile fs-4 ms-3"></i>
                             <input type="text" placeholder="Scrivi un messaggio..." v-model="newMsg" @KeyUp.enter="sendNew" >
-                            <i class="fa-solid fa-microphone fs-4 me-3"></i>
+
+                            <i class="fa-solid fa-microphone fs-4 me-3" :class="newMsg === '' ? 'd-block' : 'd-none' "></i>
+                            <i class="fa-regular fa-paper-plane fs-4 me-3" :class="newMsg === '' ? 'd-none' : 'd-block'"></i>
+                            
                         </div>
                     </div>
                 </div>
