@@ -8,8 +8,6 @@ const { createApp } = Vue
                 menu : false,
                 searchName : "",
                 scrivendo : "sta scrivendo...",
-                online : false,
-                writing : false,
                 contacts: [
                     {
                         name: 'Michele',
@@ -177,7 +175,6 @@ const { createApp } = Vue
             }
         },
         methods:{
-            
             dropdown(index) {
                 this.menu = index;
             },
@@ -191,7 +188,7 @@ const { createApp } = Vue
             sendNew(){
                 var now = new Date();
                 var current = now.getHours() + ':' + now.getMinutes();
-                this.online = true
+                
                 if ((this.newMsg !== '') && (this.newMsg.trim().length !== 0)) {
                     this.contacts[this.active].messages.push(
                         {
@@ -215,11 +212,8 @@ const { createApp } = Vue
                             status : 'received',
                             date : current
                         }
-                        
                     )
-                    return online = false
                 }, 1000)
-                
             },
             deleteMsg(indice){
                 {
