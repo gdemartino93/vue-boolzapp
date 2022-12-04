@@ -112,7 +112,14 @@
                         </div>
 
                         <div class="send-msg-bar col-8">
-                            <i class="fa-regular fa-face-smile fs-4 ms-3"></i>
+                            <a  @Click="openEmoticon()"><i class="fa-regular fa-face-smile fs-4 ms-3" ></i></a>
+                            
+                            <div class="emoticon" :class="menuEmoji === false ? 'd-none' : ''"  >
+                                <a class="box-emoticon" v-for="(emoticon,i) in emoticons" @Click="newMsg += emoticon" >
+                                    {{emoticon}}
+                                </a>
+
+                            </div>
                             <input type="text" placeholder="Scrivi un messaggio..." v-model="newMsg" @KeyUp.enter="sendNew" >
 
                             <i class="fa-solid fa-microphone fs-4 me-3" :class="newMsg === '' ? 'd-block' : 'd-none' "></i>
