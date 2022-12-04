@@ -41,9 +41,9 @@
                                     <img :src="activeUser.avatar" alt="">
                                 <div class="d-flex flex-column mx-3">
                                     <span class="fs-5">{{activeUser.name}}</span>
-                                    <span class="fs-6 text-secondary" v-if="online == false">Ultimo accesso alle 12.15</span>
-                                    <span class="fs-6 text-secondary" v-if="online == true">sta scrivendo...</span>
-                                    <!-- <span class="fs-6 text-secondary">Online</span> -->
+                                    <span class="fs-6 text-secondary" v-if="online == false && writing == false">Ultimo accesso alle 12.15</span>
+                                    <span class="fs-6 text-secondary" v-else-if="online == true && writing == true">sta scrivendo...</span>
+                                    <span class="fs-6 text-secondary" v-show="online == true && writing == false">Online</span>
                                     
                                     
                                 </div>

@@ -192,6 +192,7 @@ const { createApp } = Vue
                 var now = new Date();
                 var current = now.getHours() + ':' + now.getMinutes();
                 this.online = true
+                this.writing = true
                 if ((this.newMsg !== '') && (this.newMsg.trim().length !== 0)) {
                     this.contacts[this.active].messages.push(
                         {
@@ -217,8 +218,17 @@ const { createApp } = Vue
                         }
                         
                     )
-                    return online = false
-                }, 1000)
+                    this.writing = false
+                     this.online = true
+                }, 3000)
+               
+                
+                setTimeout(() =>{                
+                
+                    this.prova = false
+                    this.online = false
+                    
+                }, 5000)
                 
             },
             deleteMsg(indice){
